@@ -1,0 +1,8 @@
+framework module PSPDFKitUI {
+  umbrella header "PSPDFKitUI.h"
+
+  export *
+  module * { export * }
+}
+
+

@@ -1,0 +1,28 @@
+//
+//  Copyright © 2022-2023 PSPDFKit GmbH. All rights reserved.
+//
+//  THIS SOURCE CODE AND ANY ACCOMPANYING DOCUMENTATION ARE PROTECTED BY INTERNATIONAL COPYRIGHT LAW
+//  AND MAY NOT BE RESOLD OR REDISTRIBUTED. USAGE IS BOUND TO THE PSPDFKIT LICENSE AGREEMENT.
+//  UNAUTHORIZED REPRODUCTION OR DISTRIBUTION IS SUBJECT TO CIVIL AND CRIMINAL PENALTIES.
+//  This notice may not be removed from this file.
+//
+
+#import <Foundation/Foundation.h>
+#import <PSPDFKit/PSPDFMacros+Private.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@class PDFCPage;
+
+PSPDF_CLASS_SWIFT(MeasurementSnapper)
+@interface PSPDFMeasurementSnapper: NSObject
+
+PSPDF_EMPTY_INIT_UNAVAILABLE
+- (instancetype)initWithPage:(PDFCPage *)page NS_DESIGNATED_INITIALIZER;
+- (BOOL)snappedPointForPoint:(CGPoint)point adjustedPoint:(CGPoint *)adjustedPoint;
+
+@property(nonatomic, class) BOOL snappingEnabled;
+
+@end
+
+NS_ASSUME_NONNULL_END

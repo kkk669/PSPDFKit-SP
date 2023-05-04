@@ -1,0 +1,8 @@
+framework module PSPDFKit {
+  umbrella header "PSPDFKit.h"
+
+  export *
+  module * { export * }
+}
+
+
